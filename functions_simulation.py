@@ -111,7 +111,7 @@ def modelsimulation(totaltime, dt, # time in seconds
     elif uchoice==1:  # exponential
         def ufn(E,beta,A=0):
             return (1-A)*np.exp(-beta*E) + A        
-    elif uchoice==2:  #linear, with threshold of 0.5
+    elif uchoice==2:  #linear, with threshold of 0.65
         def ufn(E,beta,A=0.65):
             return (1-beta*E) * np.heaviside(1-beta*E-A,0) + A*np.heaviside(A-1+beta*E,1)        
 
